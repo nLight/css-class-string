@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = CssClassString::VERSION
   spec.authors       = ["Dmitriy Rozhkov"]
   spec.email         = ["rojkov.dmitry@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Helper for creating css class strings inspired by ReactJS classSet}
+  spec.summary       = %q{}
   spec.homepage      = ""
   spec.license       = "MIT"
 
