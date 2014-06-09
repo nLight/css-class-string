@@ -6,7 +6,7 @@ Helper for creating css class strings inspired by ReactJS classSet
 
 Add this line to your application's Gemfile:
 
-    gem 'css_class_string'
+    gem 'css-class-string'
 
 ## Usage
 
