@@ -22,6 +22,12 @@ Add this line to your application's Gemfile:
   <!-- => <span class="some classy falsy"></span> -->
 ```
 
+Outside a view
+
+```ruby
+CssClassString::Helper.new({}).to_s
+```
+
 ## Contributing
 
 1. Fork it
