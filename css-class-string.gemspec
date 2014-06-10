@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["rojkov.dmitry@gmail.com"]
   spec.description   = %q{Helper for creating css class strings inspired by ReactJS classSet}
   spec.summary       = %q{}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/nLight/css-class-string"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
