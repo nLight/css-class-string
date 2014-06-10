@@ -36,5 +36,22 @@ describe "CssClassString::Helper" do
       
     end
 
+    context 'when multiple keys are given' do
+
+      let(:hash) {
+        {
+          [:arr_truthy, :arr_falsy] => false,
+          :str_truthy => true,
+          :str_falsy => false
+        }
+      }
+      subject { CssClassString::Helper.new(hash).to_s }
+
+      it { is_expected.to match(/^\w+ \w+$/) }
+      it { is_expected.to include('arr_falsy', 'str_truthy') }
+      it { is_expected.not_to include('arr_truthy', 'str_falsy') }
+
+    end
+
   end
 end
