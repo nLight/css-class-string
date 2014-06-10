@@ -8,14 +8,14 @@ describe "CssClassString::Helper" do
       let(:hash) { {truthy: true} } 
       subject { CssClassString::Helper.new(hash).to_s } 
       
-      it { should eq("truthy") }
+      it { is_expected.to eq("truthy") }
     end
 
     context "when a key's value is falsy" do
       let(:hash) { {falsy: false} } 
       subject { CssClassString::Helper.new(hash).to_s } 
       
-      it { should eq("") }
+      it { is_expected.to eq("") }
     end
 
     context "when a key is an array of two elements" do
@@ -24,14 +24,14 @@ describe "CssClassString::Helper" do
         let(:hash) { {[:truthy, :falsy] => true} } 
         subject { CssClassString::Helper.new(hash).to_s } 
         
-        it { should eq("truthy") }
+        it { is_expected.to eq("truthy") }
       end
 
       context "when value is falsy" do
         let(:hash) { {[:truthy, :falsy] => false} } 
         subject { CssClassString::Helper.new(hash).to_s } 
         
-        it { should eq("falsy") }
+        it { is_expected.to eq("falsy") }
       end
       
     end
