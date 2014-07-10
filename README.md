@@ -2,6 +2,10 @@
 
 Helper for creating css class strings inspired by ReactJS classSet
 
+- Pass bare arguments for default classes
+- Pass hash of `class => <boolean>` for conditional classes
+- Use array with two classes as a `key` and first will be used for truthy and second for falsey value `[:true?, :false?] => <boolean>`
+
 ## Installation
 
 Add this line to your application's Gemfile:
