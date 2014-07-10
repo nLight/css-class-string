@@ -13,12 +13,16 @@ Add this line to your application's Gemfile:
 ```haml
   // @boolvalue = true
   %span{class: class_string({some: true, classy: false, [:truthy, :falsy] => @boolvalue})}
+  // equal to
+  %span{class: class_string('some', 'classy', [:truthy, :falsy] => @boolvalue)}
   // => <span class="some truthy"></span>
 ```
 
 ```html+erb
   <!-- @boolvalue = false -->
   <span class="<%= class_string({some: true, classy: true, [:truthy, :falsy] => @boolvalue} %>">
+  <!-- equal to -->
+  <span class="<%= class_string('some', 'classy', [:truthy, :falsy] => @boolvalue %>">
   <!-- => <span class="some classy falsy"></span> -->
 ```
 

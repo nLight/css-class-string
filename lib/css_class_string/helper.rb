@@ -1,7 +1,9 @@
 module CssClassString
   class Helper
-    def initialize(class_hash)
-      @class_hash = class_hash
+    def initialize(*args)
+      options     = args.last.is_a?(::Hash) ? args.pop : {}
+      @class_hash = args.map {|class_name| { class_name => true }}.reduce({}, &:merge)
+      @class_hash.merge!(options)
     end
 
     def to_s

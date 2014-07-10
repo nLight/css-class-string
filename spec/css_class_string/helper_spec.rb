@@ -53,5 +53,15 @@ describe "CssClassString::Helper" do
 
     end
 
+    context 'with truthy arguments only' do
+      subject { CssClassString::Helper.new('truthy_1', 'truthy_2').to_s }
+      it { is_expected.to eq('truthy_1 truthy_2') }
+    end
+
+    context 'with mixed arguments' do
+      subject { CssClassString::Helper.new('truthy_1', 'truthy_2', falsy: false, truthy_3: true).to_s }
+      it { is_expected.to eq('truthy_1 truthy_2 truthy_3') }
+    end
+
   end
 end
